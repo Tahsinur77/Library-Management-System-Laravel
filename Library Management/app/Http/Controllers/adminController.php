@@ -68,6 +68,7 @@ class adminController extends Controller
         $var->email = $request->email;
         $var->address = $request->address;
         $var->dob = $request->dob;
+        $var->userType = "Admin";
         $var->save();
         return redirect()->route('login');     
     }
