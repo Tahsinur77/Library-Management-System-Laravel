@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\adminController;
+use  App\Http\Controllers\memberController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +21,9 @@ Route::post('/login/Submit',[adminController::class,'loginSubmit'])->middleware(
 //reg
 Route::get('/adminReg',[adminController::class,'registration'])->name('adminReg');
 Route::post('/adminReg/submit',[adminController::class,'registrationSubmit'])->name('regSubmit');
+
+//member operation
+Route::get('/memberOpertion',[memberController::class,'memberOperation'])->name('memberOperation');
+Route::post('/member/reg/submit',[memberController::class,'memberSubmit'])->name('memberReg');
+Route::get('/memberList',[memberController::class,'memberList'])->name('memberList');
+Route::get('/member/delete/{id}',[memberController::class,'deleteMember']);
