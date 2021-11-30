@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\adminController;
 use  App\Http\Controllers\memberController;
-
+use  App\Http\Controllers\bookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +27,11 @@ Route::get('/memberOpertion',[memberController::class,'memberOperation'])->name(
 Route::post('/member/reg/submit',[memberController::class,'memberSubmit'])->name('memberReg');
 Route::get('/memberList',[memberController::class,'memberList'])->name('memberList');
 Route::get('/member/delete/{id}',[memberController::class,'deleteMember']);
+
+
+//books
+Route::post('/bookadding',[bookController::class,'bookadd'])->name('bookadd');
+Route::get('/bookList',[bookController::class,'bookList'])->name('bookList');
+Route::post('/bookEdit/{id}',[bookController::class,'bookEdit'])->name('bookEdit');
+Route::post('/bookEditSubmit/{id}',[bookController::class,'bookEditSubmit'])->name('bookEditSubmit');
+Route::post('/bookDelete/{id}',[bookController::class,'bookDelete'])->name('bookDelete');

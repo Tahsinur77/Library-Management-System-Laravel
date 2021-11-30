@@ -127,7 +127,7 @@
                     "<td align='center'>" + address + "</td>" +
                     "<td align='center'>" + phonenumber + "</td>" +
                     "<td align='center'>" + dob + "</td>"+
-                    '<td align="center"><button type="button" name="remove" id="'+phonenumber+'" class="btn btn-sucess">Edit</button></td>'+
+                    '<td align="center"><button type="button" name="remove" id="'+phonenumber+'" class="btn btn-sucesscd">Edit</button></td>'+
                     '<td align="center"><a herf ="/member/delete/'+phonenumber+'" type="button" name="remove" class="btn btn-danger btn_remove">X</a></td>'
                     "</tr>";
 
