@@ -10,6 +10,10 @@ class bookController extends Controller
 {
     //
 
+    public function bookPage(){
+        return view('Book.bookAdd');
+    }
+
     public function bookadd(Request $req){
         $book = new Book();
         $book->name = $req->name;
@@ -34,8 +38,15 @@ class bookController extends Controller
     public function bookList(){
         $books = Book::all();
 
-        return view('bookList')
+        return view('Book.bookList')
         ->with('books',$books);
+    }
+
+    public function bookDetails(Request $req){
+        $bookdetails = Bookdetail::where('bookid',$req->id)->get();
+
+        return view('Book.bookDetails')
+        ->with('bookdetails',$bookdetails);
     }
 
     public function bookEdit(Request $request){

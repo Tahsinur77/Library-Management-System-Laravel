@@ -30,8 +30,10 @@ Route::get('/member/delete/{id}',[memberController::class,'deleteMember']);
 
 
 //books
+Route::get('/bookPage',[bookController::class,'bookPage'])->name('bookPage');
 Route::post('/bookadding',[bookController::class,'bookadd'])->name('bookadd');
 Route::get('/bookList',[bookController::class,'bookList'])->name('bookList');
+Route::get('/bookDetails/{id}',[bookController::class,'bookDetails'])->name('bookDetails');
 Route::post('/bookEdit/{id}',[bookController::class,'bookEdit'])->name('bookEdit');
 Route::post('/bookEditSubmit/{id}',[bookController::class,'bookEditSubmit'])->name('bookEditSubmit');
 Route::post('/bookDelete/{id}',[bookController::class,'bookDelete'])->name('bookDelete');

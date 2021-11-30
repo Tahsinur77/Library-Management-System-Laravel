@@ -10,6 +10,6 @@ class Bookdetail extends Model
 {
     use HasFactory;
     public function book(){
-        return $this->belongTo(Book::class,'bookid');
+        return $this->belongsTo(Book::class,'bookid');
     }
 }
