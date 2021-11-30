@@ -19,6 +19,10 @@
 <div>
   @yield('bookDetails')
 </div>
+
+<div>
+  @yield('editBook')
+</div>
   
 </body>
 </html>

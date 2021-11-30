@@ -22,8 +22,8 @@
             <td>{{$book->name}}</td>
             <td>{{$book->quantity}}</td>
             <td><a href="/bookDetails/{{$book->id}}" class = "btn btn-success">Details</a></td>
-            <td><a href="" class = "btn btn-info">Edit</a></td>
-            <td><a href="" class = "btn btn-danger">Delete</a></td>
+            <td><a href="bookEdit/{{$book->id}}" class = "btn btn-info">Edit</a></td>
+            <td><a href="/bookDelete/{{$book->id}}" class = "btn btn-danger">Delete</a></td>
             <!-- <td>
                 @foreach($book->bookDetail as $bb)
                     <p>{{$bb->serial}}</p>

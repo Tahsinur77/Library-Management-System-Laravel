@@ -52,26 +52,32 @@ class bookController extends Controller
     public function bookEdit(Request $request){
         $id = $request->id;
         $book = Book::where('id',$id)->first();
-        return view('editBook')->with('book',$book);
+        return view('Book.editBook')->with('book',$book);
     }
 
-    public function bookEditSubmit(Request $request){
-        $book = Book::where('id',$request->id)->first();
+    public function bookEditSubmit(Request $req){
+
+        $book = Book::where('id',$req->id)->first();
         $book->name = $req->name;
         $book->quantity = $req->quantity;
         $book->save();
-
+      
+        foreach($book->bookDetail as $p){
+            $req->session()->put('desknumber',$p->desknumber);
+            break;
+        }
+        
+        $bookdetail = Bookdetail::where('bookid',$book->id)->delete();
 
         for($i = 1 ; $i <= $req->quantity; $i++){
             $bookdetail = new Bookdetail();
             $bookdetail->bookid = $book->id;
             $bookdetail->serial = $i;
-            $bookdetail->desknumber = $req->desknumber;
+            $bookdetail->desknumber = $req->session()->get('desknumber');
             $bookdetail->save();
         }
         
-        $var->save();
-        return $var;
+        return redirect()->route('bookList');
     }
 
     public function bookDelete(Request $request){

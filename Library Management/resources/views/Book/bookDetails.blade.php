@@ -11,6 +11,7 @@
         <tr>
             <th>Book Name</th>
             <th>Serial No.</th>
+            <th>Desknumber</th>
             <th>Issuing Book</th>
             <th>Returning Date</th>
             <th>Go</th>
@@ -20,10 +21,11 @@
         <tr>
             <td>{{$bd->book->name}}</td>
             <td>{{$bd->serial}}</td>
+            <td>{{$bd->desknumber}}</td>
             <form action="" method="post">
               <td><input type="text" placeholder = "Member Phone Number" id = "phonenumber" name = "phonenumber"></td>
               <td><input type="date" id="returning"  name = "returning"></td>
-              <td><input type="submit" class = "btn btn-info"></td>
+              <td><input type="submit" class = "btn btn-info" value = "Give"></td>
             </form>
         </tr>
         @endforeach
