@@ -17,6 +17,13 @@
 </head>
 <body>
 
+<br><br><br>
+<div class="text-center">
+  @include('inc.topnavBook')
+</div>
+
+
+
   <div>
     @yield('memberOperation')
   </div>

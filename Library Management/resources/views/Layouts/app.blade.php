@@ -10,6 +10,12 @@
 </head>
 <body>
 
+<br>
+<br>
+  <div class="text-center">
+    @include('inc.topnavBook')
+  </div>
+  <br>
   <div>
      @yield('login')
   </div>

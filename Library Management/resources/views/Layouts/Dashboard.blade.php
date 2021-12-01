@@ -10,6 +10,13 @@
 </head>
 <body>
 
+<br><br><br>
+<div class="text-center">
+  @include('inc.topnavBook')
+</div>
+
+<br><br>
+
   <div>
     @yield('dashboard')
   </div>
