@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\adminController;
 use  App\Http\Controllers\memberController;
 use  App\Http\Controllers\bookController;
+use  App\Http\Controllers\lentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +38,8 @@ Route::get('/bookDetails/{id}',[bookController::class,'bookDetails'])->name('boo
 Route::get('/bookEdit/{id}',[bookController::class,'bookEdit'])->name('bookEdit');
 Route::post('/bookEditSubmit',[bookController::class,'bookEditSubmit'])->name('bookEditSubmit');
 Route::get('/bookDelete/{id}',[bookController::class,'bookDelete'])->name('bookDelete');
+
+
+//lent
+
+Route::post('/lentby',[lentController::class,'lent'])->name('lent');
